@@ -15,6 +15,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* v1.1: the landscape iPad capture. The .shots grid is sized for
+       portrait phone captures, so this image gets its own frame. */
+    .ipad-shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 28px;
+      border-radius: 18px;
+      box-shadow: 0 12px 36px rgba(42, 33, 24, 0.14);
+    }
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -50,7 +62,7 @@
       <div class="feature-grid">
         <div class="feature">
           <h3>Read from your calendar</h3>
-          <p>Every recurring series, priced at hours per year and an estimated annual cost. Nothing is written, and nothing leaves your phone. No calendar? Enter meetings manually; the app works either way.</p>
+          <p>Every recurring series, priced at hours per year and an estimated annual cost. Nothing is written, and nothing leaves your device. No calendar? Enter meetings manually; the app works either way.</p>
         </div>
         <div class="feature">
           <h3>The monthly ritual</h3>
@@ -79,8 +91,31 @@
     </section>
 
     <section>
+      <h2>New in 1.1</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>On iPad</h3>
+          <p>Your stack and any meeting's detail side by side, with History and the monthly review built for the larger screen.</p>
+        </div>
+        <div class="feature">
+          <h3>Siri and Shortcuts</h3>
+          <p>Ask how many hours your standing meetings take each week, start your review, or open any meeting by name.</p>
+        </div>
+        <div class="feature">
+          <h3>Spotlight and widgets</h3>
+          <p>Search for a standing meeting and jump straight to it. A new medium widget pairs your weekly hours with your three heaviest meetings.</p>
+        </div>
+        <div class="feature">
+          <h3>Export the record</h3>
+          <p>Save every review and decision as a spreadsheet, ready for Numbers or Excel.</p>
+        </div>
+      </div>
+      <img class="ipad-shot" src="/images/ipad-01.png" alt="Adjourned on iPad: the stack of standing meetings beside one meeting's detail" width="1600" height="1200" loading="lazy">
+    </section>
+
+    <section>
       <h2>One-time purchase</h2>
-      <p class="lede">The full picture of what your meetings cost is free. The ritual, decisions, and the record are a single $9.99 unlock. No subscription; that would be ironic.</p>
+      <p class="lede">The full picture of what your meetings cost is free, including both widgets and asking Siri. The ritual, decisions, the record, and export are a single $9.99 unlock. No subscription; that would be ironic.</p>
     </section>
 
     <footer>
