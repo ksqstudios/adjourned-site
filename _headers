@@ -9,3 +9,6 @@
 
 /fonts/*
   Cache-Control: public, max-age=2592000
+
+/.well-known/apple-app-site-association
+  Content-Type: application/json

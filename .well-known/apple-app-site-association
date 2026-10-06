@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "BWZWZZ6FB7.app.ksqstudios.Adjourned"
+        ],
+        "components": [
+          {
+            "/": "/event/*",
+            "comment": "In-App Event deep links"
+          }
+        ]
+      }
+    ]
+  }
+}
