@@ -1,132 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adjourned: end the meetings you should not be in</title>
-  <meta name="description" content="Standing meetings accumulate like subscriptions. Adjourned counts what they cost, and holds the door while you end the ones that no longer earn their slot.">
-  <link rel="icon" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta property="og:title" content="Adjourned">
-  <meta property="og:description" content="End the meetings you should not be in.">
-  <meta property="og:image" content="https://adjournedapp.com/og-image.png">
-  <meta property="og:url" content="https://adjournedapp.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <style>
-    /* v1.1: the landscape iPad capture. The .shots grid is sized for
-       portrait phone captures, so this image gets its own frame. */
-    .ipad-shot {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-top: 28px;
-      border-radius: 18px;
-      box-shadow: 0 12px 36px rgba(42, 33, 24, 0.14);
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adjourned, end the meetings you should not be in</title>
+<meta name="description" content="Standing meetings accumulate like subscriptions. Adjourned counts what they cost, and holds the door while you end the ones that no longer earn their slot.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adjournedapp.com">
+<meta property="og:title" content="Adjourned">
+<meta property="og:description" content="End the meetings you should not be in.">
+<meta property="og:image" content="https://adjournedapp.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://adjournedapp.com">
+<meta name="theme-color" content="#faf5ec">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script defer src="/scripts.js"></script>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="mark-row">
-        <img src="/apple-touch-icon.png" alt="">
-        <a class="wordmark" href="/">Adjourned</a>
-      </div>
-    </header>
 
-    <div class="hero">
-      <div class="eyebrow">Standing meeting review</div>
-      <h1>End the meetings you<br>should not be in.</h1>
-      <p class="lede">Standing meetings accumulate like subscriptions. Created for a project that shipped or a crisis that passed, recurring forever, because cancelling is awkward and creating was easy. Adjourned counts what they cost, and holds the door while you end the ones that no longer earn their slot.</p>
-      <a class="store-badge" href="https://apps.apple.com/us/app/adjourned/id6806115869" rel="noopener" aria-label="Download on the App Store">
-        <img src="/images/app-store-badge.svg" alt="Download on the App Store" width="160" height="53" style="display: block;">
-      </a>
-    </div>
+<header class="bar">
+  <div class="bar-inner">
+    <a class="mark" href="/"><img src="/apple-touch-icon.png" alt="" width="36" height="36">Adjourned</a>
+    <nav aria-label="Site">
+      <a href="/support">Support</a>
+      <a class="bar-cta" href="https://apps.apple.com/us/app/adjourned/id6806115869" rel="noopener">Get Adjourned</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="figures">
-      <div class="figure-card coral">
-        <div class="big">12.9 hr/wk</div>
-        <div class="caption">the average manager, in standing meetings</div>
-      </div>
-      <div class="figure-card golden">
-        <div class="big">est. $46k/yr</div>
-        <div class="caption">one daily standup, seven people</div>
-      </div>
-    </div>
+<main>
 
-    <section>
-      <h2>The honest accounting</h2>
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>Read from your calendar</h3>
-          <p>Every recurring series, priced at hours per year and an estimated annual cost. Nothing is written, and nothing leaves your device. No calendar? Enter meetings manually; the app works either way.</p>
+  <section class="hero">
+    <p class="eyebrow">Standing meeting review</p>
+    <h1>End the meetings you should not be in.</h1>
+    <p class="lede">
+      Standing meetings accumulate like subscriptions. Created for a project
+      that shipped or a crisis that passed, recurring forever, because
+      cancelling is awkward and creating was easy. Adjourned counts what they
+      cost, and holds the door while you end the ones that no longer earn
+      their slot.
+    </p>
+    <p class="buy">
+      <a class="button" href="https://apps.apple.com/us/app/adjourned/id6806115869" rel="noopener">Download on the App Store</a>
+      <span>iPhone and iPad. Free to see the cost; $9.99 once for the rest.</span>
+    </p>
+  </section>
+
+  <!-- The review. A tall section with a sticky week inside it: scrolling
+       through it runs a monthly review. First every meeting gets a decision
+       and the number does not move. Then the decisions are carried out, the
+       week clears, the number falls, and the color goes from sunset back
+       toward clear sky. -->
+  <section class="review" id="review">
+    <div class="review-stick">
+      <div class="review-inner">
+
+        <div class="review-side">
+          <div class="hours" id="hours">
+            <p class="hours-num"><span id="hours-val">12.9</span> hr/wk</p>
+            <p class="hours-sub"><span id="hours-count">10</span> standing meetings</p>
+          </div>
+          <ol class="steps" id="steps">
+            <li class="is-on">
+              <span class="step-tag">An example week</span>
+              Ten standing meetings, most made for something that has since
+              passed. Scroll to review them.
+            </li>
+            <li>
+              <span class="step-tag">The review</span>
+              One question per meeting: does it earn its time? Then a
+              decision. Keep, shorten, or cut.
+            </li>
+            <li>
+              <span class="step-tag">Still 12.9</span>
+              Decisions do not lower the number. Until a meeting actually
+              ends, it still counts.
+            </li>
+            <li>
+              <span class="step-tag">The follow-through</span>
+              You end them, and confirm each one. Adjourned never cancels
+              anything for you.
+            </li>
+            <li>
+              <span class="step-tag">Actions do</span>
+              The same week, with the slots that no longer earned their time
+              given back.
+            </li>
+          </ol>
         </div>
-        <div class="feature">
+
+        <div class="week" id="week" aria-label="An example work week of standing meetings">
+          <div class="days" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+          <div class="grid">
+            <div class="hours-col" aria-hidden="true"><span>9</span><span>10</span><span>11</span><span>12</span><span>1</span><span>2</span><span>3</span><span>4</span></div>
+            <div class="cols">
+              <!-- data-day 0 to 4, data-start minutes after 9:00, data-len and
+                   data-to in minutes (data-to 0 means the meeting ends). -->
+              <div class="mtg t-coral" data-m="standup" data-day="0" data-start="30" data-len="30" data-to="15"><b><span class="full">Daily Standup</span><span class="abbr">Standup</span></b></div>
+              <div class="mtg t-coral" data-m="standup" data-day="1" data-start="30" data-len="30" data-to="15"><b><span class="full">Daily Standup</span><span class="abbr">Standup</span></b></div>
+              <div class="mtg t-coral" data-m="standup" data-day="2" data-start="30" data-len="30" data-to="15"><b><span class="full">Daily Standup</span><span class="abbr">Standup</span></b></div>
+              <div class="mtg t-coral" data-m="standup" data-day="3" data-start="30" data-len="30" data-to="15"><b><span class="full">Daily Standup</span><span class="abbr">Standup</span></b></div>
+              <div class="mtg t-coral" data-m="standup" data-day="4" data-start="30" data-len="30" data-to="15"><b><span class="full">Daily Standup</span><span class="abbr">Standup</span></b></div>
+              <div class="mtg t-verm" data-m="program" data-day="0" data-start="120" data-len="60" data-to="30"><b>Program Sync</b><i>12 people</i></div>
+              <div class="mtg t-verm" data-m="program" data-day="1" data-start="120" data-len="60" data-to="30"><b>Program Sync</b><i>12 people</i></div>
+              <div class="mtg t-verm" data-m="program" data-day="2" data-start="120" data-len="60" data-to="30"><b>Program Sync</b><i>12 people</i></div>
+              <div class="mtg t-verm" data-m="program" data-day="3" data-start="120" data-len="60" data-to="30"><b>Program Sync</b><i>12 people</i></div>
+              <div class="mtg t-verm" data-m="program" data-day="4" data-start="120" data-len="60" data-to="30"><b>Program Sync</b><i>12 people</i></div>
+              <div class="mtg t-coral" data-m="sprint" data-day="0" data-start="240" data-len="120" data-to="0"><b>Sprint Planning</b><i>9 people</i></div>
+              <div class="mtg t-apricot" data-m="staff" data-day="1" data-start="300" data-len="60" data-to="30"><b>Staff Meeting</b><i>9 people</i></div>
+              <div class="mtg t-golden" data-m="skip" data-day="2" data-start="270" data-len="30" data-to="30"><b><span class="full">Skip-level 1:1</span><span class="abbr">Skip-level</span></b></div>
+              <div class="mtg t-golden" data-m="alex" data-day="2" data-start="360" data-len="50" data-to="50"><b>1:1 with Alex</b></div>
+              <div class="mtg t-golden" data-m="design" data-day="3" data-start="240" data-len="60" data-to="60"><b>Design Review</b><i>6 people</i></div>
+              <div class="mtg t-apricot" data-m="vendor" data-day="3" data-start="390" data-len="60" data-to="0"><b>Vendor Check-in</b><i>4 people</i></div>
+              <div class="mtg t-apricot" data-m="bug" data-day="4" data-start="60" data-len="30" data-to="15"><b><span class="full">Bug Triage</span><span class="abbr">Triage</span></b></div>
+              <div class="mtg t-golden" data-m="allhands" data-day="4" data-start="420" data-len="60" data-to="60"><b>All Hands</b></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-inner">
+      <h2>The honest accounting</h2>
+      <div class="ledger">
+        <div>
+          <p class="num">01</p>
+          <h3>Read from your calendar</h3>
+          <p>Every recurring series, priced at hours per year and an estimated annual cost. Nothing is written, and nothing leaves your device. No calendar? Enter meetings by hand; the app works either way.</p>
+        </div>
+        <div>
+          <p class="num">02</p>
           <h3>The monthly ritual</h3>
           <p>One card per standing meeting, one question: does this meeting earn its time? Then a decision. Keep, shorten, cut, or defer.</p>
         </div>
-        <div class="feature">
+        <div>
+          <p class="num">03</p>
           <h3>Decisions are not actions</h3>
-          <p>A cut meeting still counts until you confirm it actually ended. Adjourned never cancels anything for you; it records what you decided, and holds you to it.</p>
+          <p>A cut meeting still counts until you confirm it actually ended. Adjourned records what you decided, and holds you to it.</p>
         </div>
-        <div class="feature">
+        <div>
+          <p class="num">04</p>
           <h3>The record</h3>
           <p>Every review, every decision, over time. A meeting sliding from Usually to Rarely across three reviews is telling you something before you have admitted it.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section class="band shots-band">
+    <div class="band-inner">
       <h2>The day, burning down or clearing up</h2>
-      <p class="lede">The gradient tracks your weekly hours. A lean calendar is clear sky; a meeting-swamped one has gone to sunset. Decisions do not lower the number. Actions do.</p>
+      <p class="band-lede">The color follows your weekly hours. A lean calendar is clear sky; a meeting-swamped one has gone to sunset.</p>
       <div class="shots">
-        <img src="/images/01.png" alt="The stack: every standing meeting, priced">
-        <img src="/images/02.png" alt="A ritual card with the value question">
-        <img src="/images/03.png" alt="Pending decisions awaiting action">
-        <img src="/images/04.png" alt="The review history">
+        <figure><img src="/images/shot-stack.png" alt="The stack: 12.9 hours a week across ten standing meetings, each priced in hours per year." width="900" height="1865" loading="lazy"><figcaption>The stack, priced.</figcaption></figure>
+        <figure><img src="/images/shot-ritual.png" alt="A review card for Program Sync asking whether the meeting earns its time, with Keep, Shorten and Cut." width="900" height="1865" loading="lazy"><figcaption>One question, then a decision.</figcaption></figure>
+        <figure><img src="/images/shot-pending.png" alt="Pending decisions: meetings marked to shorten or end that are still on the calendar." width="900" height="1865" loading="lazy"><figcaption>Decided, not yet done.</figcaption></figure>
+        <figure><img src="/images/shot-record.png" alt="The history of reviews, month by month, with each decision." width="900" height="1865" loading="lazy"><figcaption>Every decision, over time.</figcaption></figure>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>New in 1.1</h2>
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>On iPad</h3>
-          <p>Your stack and any meeting's detail side by side, with History and the monthly review built for the larger screen.</p>
-        </div>
-        <div class="feature">
-          <h3>Siri and Shortcuts</h3>
-          <p>Ask how many hours your standing meetings take each week, start your review, or open any meeting by name.</p>
-        </div>
-        <div class="feature">
-          <h3>Spotlight and widgets</h3>
-          <p>Search for a standing meeting and jump straight to it. A new medium widget pairs your weekly hours with your three heaviest meetings.</p>
-        </div>
-        <div class="feature">
-          <h3>Export the record</h3>
-          <p>Save every review and decision as a spreadsheet, ready for Numbers or Excel.</p>
-        </div>
+  <section class="band">
+    <div class="band-inner wide-pair">
+      <div>
+        <h2>Side by side</h2>
+        <p>
+          On iPad and on the iPhone Duo's inner display, your stack of
+          standing meetings sits beside the one you are looking at. Ask Siri
+          how many hours your standing meetings take each week, find any
+          meeting in Spotlight, and save the whole record as a spreadsheet.
+        </p>
       </div>
-      <img class="ipad-shot" src="/images/ipad-01.png" alt="Adjourned on iPad: the stack of standing meetings beside one meeting's detail" width="1600" height="1200" loading="lazy">
-    </section>
+      <figure class="duo">
+        <img src="/images/duo.png" alt="Adjourned on the unfolded iPhone Duo: the stack at 12.9 hours a week beside Program Sync, 260 hours a year." width="1600" height="1125" loading="lazy">
+      </figure>
+    </div>
+  </section>
 
-    <section>
-      <h2>One-time purchase</h2>
-      <p class="lede">The full picture of what your meetings cost is free, including both widgets and asking Siri. The ritual, decisions, the record, and export are a single $9.99 unlock. No subscription; that would be ironic.</p>
-    </section>
+  <section class="price">
+    <p class="price-num">$9.99, once.</p>
+    <p class="price-line">No subscription; that would be ironic.</p>
+    <p class="price-sub">
+      The full picture of what your meetings cost is free, including both
+      widgets and asking Siri. The ritual, decisions, the record, and export
+      are the one-time unlock.
+    </p>
+    <p class="buy">
+      <a class="button" href="https://apps.apple.com/us/app/adjourned/id6806115869" rel="noopener">Download on the App Store</a>
+    </p>
+  </section>
 
-    <footer>
-      <nav>
-        <a href="/privacy">Privacy</a>
-        <a href="/support">Support</a>
-        <a href="https://ksqstudios.com">KSQ Studios</a>
-      </nav>
-      <p>Adjourned is designed, built, and supported by one person, Kurt Klein, in Berwyn, Pennsylvania, under KSQ Studios.</p>
-      <div>&copy; 2026 KSQ Studios LLC</div>
-    </footer>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <nav aria-label="Footer">
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
+      <a href="https://ksqstudios.com">KSQ Studios</a>
+    </nav>
+    <p>Adjourned is designed, built, and supported by one person, Kurt Klein, in Berwyn, Pennsylvania, under KSQ Studios. Write to <a href="mailto:techsupport@ksqstudios.com">techsupport@ksqstudios.com</a>.</p>
+    <p>2026 KSQ Studios LLC.</p>
   </div>
+</footer>
+
 </body>
 </html>
